@@ -1,11 +1,13 @@
 class Paper{
     constructor(x,y,r){
+        super(x,y,80);
+        this.image = loadImage("paper.png");
 
         var options={
             isStatic:false,
-           'restitution' :0.3,
-            'friction': 0.5,
-            ' density':1.2
+           restitution :0.3,
+            friction: 0.5,
+             density:1.2
         };
         this.x=x;
         this.y=y;
@@ -23,5 +25,6 @@ class Paper{
         fill("black")
         ellipse(0,0,this.r,this.r);
         pop();
+        super.display();
     }
 }
